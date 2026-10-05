@@ -18,6 +18,7 @@ export const cleoroboticsProjects: Project[] = [
       "CleVis",
       "Python",
       "Robot / PLC / Vision Mock",
+      "FANUC Robot (OLT 연계 구조 분석)",
       "Test Simulator",
       "Claude Code (Orca)",
       "ChatGPT",

@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/common/BrandIcons";
 import { Chip } from "@/components/common/Chip";
-import { Reveal } from "@/components/common/Reveal";
 import { sections } from "@/data/nav";
 import { profile } from "@/data/profile";
 import { HeroGraph } from "./HeroGraph";
@@ -13,12 +12,12 @@ export function Hero() {
       <div className="grid-bg pointer-events-none absolute inset-0 -z-10" aria-hidden />
       <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:pb-28 lg:pt-28">
         <div>
-          <Reveal>
+          <div className="rise">
             <p className="eyebrow">
               {sections.hero.index} <span aria-hidden>—</span> {profile.title} · {profile.yearsLabel}
             </p>
-          </Reveal>
-          <Reveal delay={80}>
+          </div>
+          <div className="rise" style={{ ["--rise-delay" as string]: "80ms" } as React.CSSProperties}>
             <h1
               id="hero-title"
               className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
@@ -27,20 +26,20 @@ export function Hero() {
               <br />
               <span className="text-muted">{line2}</span>
             </h1>
-          </Reveal>
-          <Reveal delay={160}>
+          </div>
+          <div className="rise" style={{ ["--rise-delay" as string]: "160ms" } as React.CSSProperties}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
               {profile.tagline.ko}
             </p>
-          </Reveal>
-          <Reveal delay={220}>
+          </div>
+          <div className="rise" style={{ ["--rise-delay" as string]: "220ms" } as React.CSSProperties}>
             <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <span className="text-2xl font-semibold tracking-tight">{profile.nameKo}</span>
               <span className="font-mono text-sm text-muted">{profile.nameEn}</span>
               <span className="text-sm text-muted">· {profile.title}</span>
             </p>
-          </Reveal>
-          <Reveal delay={280}>
+          </div>
+          <div className="rise" style={{ ["--rise-delay" as string]: "280ms" } as React.CSSProperties}>
             <ul className="mt-6 flex flex-wrap gap-2" aria-label="핵심 영역">
               {profile.focus.map((f) => (
                 <li key={f}>
@@ -48,8 +47,8 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-          </Reveal>
-          <Reveal delay={340}>
+          </div>
+          <div className="rise" style={{ ["--rise-delay" as string]: "340ms" } as React.CSSProperties}>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
                 href={`#${sections.featured.id}`}
@@ -77,7 +76,7 @@ export function Hero() {
                 LinkedIn
               </a>
             </div>
-          </Reveal>
+          </div>
         </div>
 
         <div className="hidden lg:block">

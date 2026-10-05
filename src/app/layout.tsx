@@ -40,9 +40,32 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: `${profile.nameEn} Portfolio`,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: title }],
   },
-  twitter: { card: "summary_large_image", title, description },
+  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.nameEn,
+  alternateName: profile.nameKo,
+  jobTitle: profile.title,
+  url: siteUrl,
+  email: `mailto:${profile.links.email}`,
+  sameAs: [profile.links.linkedin, profile.links.github],
+  knowsAbout: [
+    "Software QA",
+    "Test Automation",
+    "Playwright",
+    "Cloud QA",
+    "Kubernetes",
+    "Industrial Robot / PLC / Vision QA",
+    "Test Simulator",
+    "AI-assisted QA",
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -50,21 +73,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ko" className={`${jetbrains.variable} h-full`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-          crossOrigin="anonymous"
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
       </head>
       <body className="flex min-h-full flex-col">
         <a
-          href="#about"
+          href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-fg focus:px-3 focus:py-2 focus:text-bg"
         >
           본문으로 건너뛰기
         </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" tabIndex={-1} className="flex-1 outline-none">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

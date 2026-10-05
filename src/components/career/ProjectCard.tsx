@@ -4,7 +4,8 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Chip } from "@/components/common/Chip";
 import { StatusBadge } from "@/components/common/StatusBadge";
-import { ProjectIllustration, hasIllustration } from "@/components/illustrations";
+import { hasIllustration } from "@/components/illustrations";
+import { LazyIllustration } from "@/components/illustrations/LazyIllustration";
 import { useOpenProjectOnClick } from "@/components/project/ProjectDrawer";
 import { formatPeriod } from "@/data/companies";
 import type { Project } from "@/data/types";
@@ -38,12 +39,11 @@ export function ProjectCard({ project: p }: Props) {
       ) : null}
 
       {showIllu ? (
-        <div
+        <LazyIllustration
+          slug={p.slug}
+          slice={featured}
           className={`mb-5 overflow-hidden rounded-lg border border-line ${featured ? "aspect-[16/6]" : "aspect-[16/9]"}`}
-          aria-hidden
-        >
-          <ProjectIllustration slug={p.slug} slice={featured} />
-        </div>
+        />
       ) : null}
 
       <div className="flex flex-wrap items-center gap-2">

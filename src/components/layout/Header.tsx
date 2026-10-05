@@ -36,7 +36,7 @@ export function Header() {
         <a
           href="#hero"
           className="font-mono text-xs tracking-[0.14em] text-fg"
-          aria-label="맨 위로"
+          title="맨 위로"
         >
           {profile.nameEn.toUpperCase()}
           <span className="text-muted"> / </span>
