@@ -12,15 +12,15 @@ export function Hero() {
       <div className="grid-bg pointer-events-none absolute inset-0 -z-10" aria-hidden />
       <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:pb-28 lg:pt-28">
         <div>
-          <div className="rise">
+          <div>
             <p className="eyebrow">
               {sections.hero.index} <span aria-hidden>—</span> {profile.title} · {profile.yearsLabel}
             </p>
           </div>
-          <div className="rise" style={{ ["--rise-delay" as string]: "80ms" } as React.CSSProperties}>
+          <div>
             <h1
               id="hero-title"
-              className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
+              className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
             >
               {line1}
               <br />

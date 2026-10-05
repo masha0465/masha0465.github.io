@@ -50,6 +50,8 @@
   --font-sans: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo",
     system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Self-hosted Latin display face for the LCP headline; Pretendard's Latin is Inter-derived. */
+  --font-display: var(--font-inter), "Pretendard Variable", Pretendard, system-ui, sans-serif;
   --shadow-card: var(--shadow);
 }
 
