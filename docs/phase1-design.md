@@ -95,7 +95,7 @@ AI-assisted QA ............ 2026  Claude Code(Orca) + ChatGPT 교차 검증
 ### 다르게 갈 점 (차별화)
 - 벤치마크는 "기획 단계 참여형 QA" 메시지 → 우리는 "Testable System을 만드는 QA" (시스템/환경/프로세스 구축)
 - 라이트 단일 테마 → Dark 기본 + Light 토글 (Engineering 톤)
-- 프로젝트 3개 → 22개를 3-Tier로 계층화 (Featured 2 / Detailed 7 / Compact 13)
+- 프로젝트 3개 → 21개를 3-Tier로 계층화 (Featured 2 / Detailed 7 / Compact 12)
 - 수식형 다이어그램 → **Node Graph 스타일 아키텍처 다이어그램** (CleVis Node Graph 분석 경험과 시각적으로 연결)
 - 수치 거의 없음 → 근거 있는 Metrics 카드 섹션 추가
 - 인트로 선택 화면 생략 (30초 내 이해 목표에 역행). 바로 Hero
@@ -210,7 +210,7 @@ Mobile: 내비 → 햄버거 시트, Growth Path 가로→세로, 타임라인 �
 | `webmanager-first-release` | Web Manager 7.0 첫 출시 제품 품질 관리 | 피앤피시큐어 | 2025.04~07 |
 | `webtob-multi-cloud` | 다양한 클라우드 환경 WebtoB 테스트 및 배포 | 티맥스소프트 | 2016.12~2019.12 |
 
-### Tier 3 — Compact (소형 카드 + 요약 상세: Overview/Role/Result)
+### Tier 3 — Compact (소형 카드 + 요약 상세: Overview/Role/Result) — 12개
 | slug | 프로젝트 | 회사 | 기간 |
 |------|----------|------|------|
 | `onboarding-setup-manual` | 온보딩 과제 - 제품 셋업 매뉴얼 및 검증 체크리스트 표준화 | 클레로보틱스 | 2026.06~07 |
@@ -226,7 +226,7 @@ Mobile: 내비 → 햄버거 시트, Growth Path 가로→세로, 타임라인 �
 | `webtob-release-qa-automation` | WebtoB 정기 릴리즈 QA 및 테스트 자동화 확장 | 티맥스소프트 | 2013.12~2020.04 |
 | `nhn-mobile-qa` | 모바일 앱/Web QA (NBP_모바일팜, WANNABE, 네이버북스) | NHN TS | 2012.07~2013.07 |
 
-총 22개. 홈 타임라인에서 회사별 상위 4개 노출, 나머지는 "더 보기"로 펼침.
+총 21개 (Tier 1: 2 · Tier 2: 7 · Tier 3: 12). 홈 타임라인에서 회사별 상위 4개 노출, 나머지는 "더 보기"로 펼침. (초안의 22개는 집계 오류였음, 2026-10-05 수정)
 
 ---
 
@@ -332,7 +332,7 @@ Overview · Role · Result 3단 + 기술 칩. 특히 QnA Bot은 "기여도 30% �
 |-------|------|--------|
 | 1 | 분석·설계 (본 문서) | docs/phase1-design.md |
 | 2 | 프로젝트 셋업, 디자인 토큰, Header/Footer/Theme, Hero, About, Growth Path | 동작하는 홈 상단 |
-| 3 | 데이터 모델 + 22개 프로젝트 데이터 입력, Timeline, ProjectCard, Metrics | 홈 중단 |
+| 3 | 데이터 모델 + 21개 프로젝트 데이터 입력, Timeline, ProjectCard, Metrics | 홈 중단 |
 | 4 | ProjectDrawer + `/projects/[slug]` 상세 | 상세 UX |
 | 5 | FlowDiagram 컴포넌트, Simulator/QA System 다이어그램, Featured 섹션 | 시각화 |
 | 6 | AI-assisted QA 섹션 | |
