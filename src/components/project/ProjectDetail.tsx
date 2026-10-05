@@ -2,6 +2,7 @@ import { Chip } from "@/components/common/Chip";
 import { StatusBadge } from "@/components/common/StatusBadge";
 import { companyById, formatPeriod } from "@/data/companies";
 import type { Project } from "@/data/types";
+import { ProjectIllustration, hasIllustration } from "@/components/illustrations";
 import { ProjectGallery } from "./ProjectGallery";
 
 type Block = { key: keyof Project; label: string; en: string };
@@ -19,6 +20,7 @@ const BLOCKS: Block[] = [
 
 export function ProjectDetail({ project: p }: { project: Project }) {
   const company = companyById[p.company];
+  const showIllu = hasIllustration(p.slug);
 
   return (
     <article>
@@ -62,6 +64,17 @@ export function ProjectDetail({ project: p }: { project: Project }) {
           ))}
         </ul>
       </header>
+
+      {showIllu ? (
+        <figure className="mt-8 overflow-hidden rounded-xl border border-line shadow-card">
+          <div className="aspect-[16/9]">
+            <ProjectIllustration slug={p.slug} />
+          </div>
+          <figcaption className="border-t border-line bg-surface px-4 py-2.5 font-mono text-[11px] tracking-wide text-muted">
+            시스템 구성 개념도 · 경력서 내용을 바탕으로 그린 원본 일러스트 (실제 제품 사진 아님)
+          </figcaption>
+        </figure>
+      ) : null}
 
       {p.metrics && p.metrics.length > 0 ? (
         <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="핵심 수치">

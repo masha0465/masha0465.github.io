@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Chip } from "@/components/common/Chip";
 import { StatusBadge } from "@/components/common/StatusBadge";
+import { ProjectIllustration, hasIllustration } from "@/components/illustrations";
 import { formatPeriod } from "@/data/companies";
 import type { Project } from "@/data/types";
 
@@ -14,6 +15,7 @@ type Props = { project: Project; index?: number };
 export function ProjectCard({ project: p }: Props) {
   const featured = p.tier === 1;
   const compact = p.tier === 3;
+  const showIllu = hasIllustration(p.slug);
 
   return (
     <Link
@@ -28,6 +30,15 @@ export function ProjectCard({ project: p }: Props) {
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
           aria-hidden
         />
+      ) : null}
+
+      {showIllu ? (
+        <div
+          className={`mb-5 overflow-hidden rounded-lg border border-line ${featured ? "aspect-[16/6]" : "aspect-[16/9]"}`}
+          aria-hidden
+        >
+          <ProjectIllustration slug={p.slug} slice={featured} />
+        </div>
       ) : null}
 
       <div className="flex flex-wrap items-center gap-2">

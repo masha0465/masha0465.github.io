@@ -1,5 +1,8 @@
 # Project images
 
+Every project already has an original SVG system illustration (src/components/illustrations).
+Real screenshots / photos added here are shown in the detail-page gallery in addition to it.
+
 Put screenshots / photos for each project in a folder named after the project slug:
 
     public/projects/<slug>/01-xxx.png
