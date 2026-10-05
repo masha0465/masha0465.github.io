@@ -1,4 +1,5 @@
 import { About } from "@/components/about/About";
+import { AiQa } from "@/components/ai/AiQa";
 import { Timeline } from "@/components/career/Timeline";
 import { Featured } from "@/components/featured/Featured";
 import { Hero } from "@/components/hero/Hero";
@@ -13,7 +14,8 @@ export default function Home() {
       <Metrics />
       <Timeline />
       <Featured />
-      {/* Phase 6: AI-assisted QA · Phase 7: Skills, Certs */}
+      <AiQa />
+      {/* Phase 7: Skills, Certs */}
     </ProjectDrawerProvider>
   );
 }
