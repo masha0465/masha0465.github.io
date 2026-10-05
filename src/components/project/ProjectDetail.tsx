@@ -18,7 +18,8 @@ const BLOCKS: Block[] = [
   { key: "learned", label: "배운 점", en: "What I Learned" },
 ];
 
-export function ProjectDetail({ project: p }: { project: Project }) {
+export function ProjectDetail({ project: p, titleAs = "h1" }: { project: Project; titleAs?: "h1" | "h2" }) {
+  const Title = titleAs;
   const company = companyById[p.company];
   const showIllu = hasIllustration(p.slug);
 
@@ -31,9 +32,9 @@ export function ProjectDetail({ project: p }: { project: Project }) {
           <StatusBadge status={p.status === "in-progress" ? "in-progress" : "done"} />
           {p.statusNote ? <span className="text-xs text-muted">{p.statusNote}</span> : null}
         </div>
-        <h1 className="mt-4 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+        <Title className="mt-4 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
           {p.title}
-        </h1>
+        </Title>
         <p className="mt-2 font-mono text-sm text-muted">{p.titleEn}</p>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-fg sm:text-lg">{p.summary}</p>
 

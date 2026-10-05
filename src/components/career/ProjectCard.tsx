@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Chip } from "@/components/common/Chip";
 import { StatusBadge } from "@/components/common/StatusBadge";
 import { ProjectIllustration, hasIllustration } from "@/components/illustrations";
+import { useOpenProjectOnClick } from "@/components/project/ProjectDrawer";
 import { formatPeriod } from "@/data/companies";
 import type { Project } from "@/data/types";
 
@@ -16,10 +19,12 @@ export function ProjectCard({ project: p }: Props) {
   const featured = p.tier === 1;
   const compact = p.tier === 3;
   const showIllu = hasIllustration(p.slug);
+  const onClick = useOpenProjectOnClick(p.slug);
 
   return (
     <Link
       href={`/projects/${p.slug}/`}
+      onClick={onClick}
       aria-label={`${p.title} 상세 보기`}
       className={`group relative flex h-full flex-col rounded-xl border bg-surface shadow-card transition-[transform,border-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:border-line-strong focus-visible:-translate-y-0.5 ${
         featured ? "border-accent/40 p-6 sm:p-7 md:col-span-2" : compact ? "border-line p-5" : "border-line p-5 sm:p-6"
