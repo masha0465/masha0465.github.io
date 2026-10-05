@@ -65,7 +65,7 @@ export function DbAccessControl({ slice, variant = "e2e" }: { slice?: boolean; v
       {/* targets */}
       <Db x={470} y={70} label="MySQL" />
       <Db x={560} y={70} label="PostgreSQL" />
-      <Db x={650} y={70} label="Oracle" />
+      <Db x={650} y={70} label="NoSQL" />
       <Box x={450} y={150} w={90} h={34} label="SSH" />
       <Box x={552} y={150} w={90} h={34} label="SFTP" />
       <Box x={654} y={150} w={90} h={34} label="TELNET" />

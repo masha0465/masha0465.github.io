@@ -337,4 +337,4 @@ Overview · Role · Result 3단 + 기술 칩. 특히 QnA Bot은 "기여도 30% �
 | 5 | FlowDiagram 컴포넌트, Simulator/QA System 다이어그램, Featured 섹션 | 시각화 |
 | 6 | AI-assisted QA 섹션 | |
 | 7 | 반응형, 모션, 접근성, SEO, 성능 점검 | Lighthouse |
-| 8 | 경력서 대조 전수 검증 (회사명·기간·직무·수치·상태 표현) | 검증 체크리스트 |
+| 8 | 경력서 대조 전수 검증 (회사명·기간·직무·수치·상태 표현) | docs/phase8-verification.md · scripts/factcheck.py (2026-10-06 완료) |

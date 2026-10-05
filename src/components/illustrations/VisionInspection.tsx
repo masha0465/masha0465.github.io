@@ -8,7 +8,7 @@ export function VisionInspection({ slice }: { slice?: boolean }) {
       <Camera3D x={150} y={80} coneTo={{ x: 150, y: 212, half: 78 }} label="2D / 3D Vision" />
       <rect x={66} y={212} width={168} height={40} rx={4} className="fill-surface stroke-fg" strokeWidth={1.4} />
       <text x={150} y={238} textAnchor="middle" className="fill-fg font-mono" style={{ fontSize: 13, letterSpacing: "0.16em", fontWeight: 600 }}>
-        KMH•A81•••••••••
+        VIN ••••••••••••••
       </text>
       <Label x={150} y={270} anchor="middle" size={10} muted>
         VIN 각자 17자 · 실촬영 샘플 10여 장

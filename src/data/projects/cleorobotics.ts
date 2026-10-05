@@ -74,7 +74,7 @@ export const cleoroboticsProjects: Project[] = [
     titleEn: "QA System 0 → 1 · Company-wide Work Management",
     period: { start: "2026.06" },
     status: "in-progress",
-    statusNote: "QA 프로세스 수립 완료 · 전사 확대 진행 중",
+    statusNote: "QA 프로세스 수립 · 전사 확대 진행 중",
     role: "책임연구원 / QA 리드",
     contribution: "100% (QA 조직 신설 인력으로 프로세스·도구·문화 전 영역 설계)",
     tech: [

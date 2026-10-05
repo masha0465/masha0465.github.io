@@ -62,7 +62,7 @@ export function WorkflowSystem({ slice }: { slice?: boolean }) {
         ))}
       </g>
       <Label x={40} y={400} size={9.5} muted>
-        프로젝트 템플릿: 역할별 Workflow · 필수 항목 · 종료 조건
+        프로젝트 템플릿: 역할별 Workflow · 필수 항목 · 종료 조건 (셀 배치는 예시)
       </Label>
 
       {/* expansion ladder */}

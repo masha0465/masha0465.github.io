@@ -22,7 +22,7 @@ export function CloudInfra({ slice }: { slice?: boolean }) {
       {/* VPC */}
       <rect x={250} y={130} width={510} height={240} rx={10} className="fill-surface stroke-accent" strokeWidth={1.4} strokeDasharray="6 4" />
       <Label x={264} y={150} size={10.5} bold accent>
-        VPC pnp-cloud-service · 10.0.100.0/24
+        VPC · 10.0.100.0/24
       </Label>
       {[
         { x: 264, y: 164, t: "Zone A · public" },

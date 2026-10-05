@@ -24,7 +24,7 @@ export const aiPipeline: AiStage[] = [
     tone: "ai",
     fields: [
       { k: "AI 활용", v: "Workflow 분석, 테스트 시나리오, 시뮬레이터 구현 가속" },
-      { k: "QA Check", v: "분석 결과를 실제 Config · Node Graph와 대조" },
+      { k: "QA Check", v: "AI 생성 결과를 그대로 쓰지 않고 QA 검증 대상으로 취급" },
     ],
   },
   {
@@ -33,7 +33,7 @@ export const aiPipeline: AiStage[] = [
     tone: "ai",
     fields: [
       { k: "AI 활용", v: "설계·분석 결과와 구현 방향을 다른 모델로 교차 검증" },
-      { k: "QA Check", v: "두 결과가 어긋나는 지점을 검토 대상으로 분리" },
+      { k: "QA Check", v: "설계·분석 결과와 구현 방향을 교차 검증" },
     ],
   },
   {
@@ -58,7 +58,7 @@ export const aiPipeline: AiStage[] = [
 export const aiPrinciples = [
   {
     title: "AI는 가속 도구, 판단은 QA",
-    body: "AI가 만든 분석과 코드를 그대로 쓰지 않습니다. 실제 Config와 실행 결과에 대조해 맞는지 확인한 뒤에만 반영합니다.",
+    body: "AI가 만든 분석과 구현을 그대로 쓰지 않습니다. 다른 AI 도구와 실제 CleVis Offline 실행 결과로 교차 검증한 뒤 반영합니다.",
   },
   {
     title: "교차 검증은 두 겹으로",

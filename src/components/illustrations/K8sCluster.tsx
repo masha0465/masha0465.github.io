@@ -60,8 +60,8 @@ export function K8sCluster({ slice }: { slice?: boolean }) {
             {w.label}
           </Label>
           <Pod x={w.x + 12} y={210} label="Pod · DB" accent />
-          <Pod x={w.x + 12} y={246} label="Pod · DBSAFER" />
-          <Pod x={w.x + 12} y={282} label="Pod · Test Tools" />
+          <Pod x={w.x + 12} y={246} label="Pod · Service" />
+          <Pod x={w.x + 12} y={282} label="Pod · Test" />
         </g>
       ))}
 
