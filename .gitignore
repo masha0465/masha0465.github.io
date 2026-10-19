@@ -46,3 +46,6 @@ docs/shots/
 # personal source documents (contain phone number) — never commit
 *.pdf
 docs/resume-source.txt
+
+# generated portfolio PDF is public by design
+!public/portfolio.pdf
