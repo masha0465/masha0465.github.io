@@ -98,6 +98,42 @@ body {
   color: var(--muted);
 }
 
+/* ---------- Print rendition (/print → portfolio.pdf) ---------- */
+body:has(.print-root) > header,
+body:has(.print-root) > footer,
+body:has(.print-root) > a[href="#main"] {
+  display: none;
+}
+body:has(.print-root) {
+  background: #fafaf9;
+}
+.print-root .page-break {
+  break-before: page;
+  page-break-before: always;
+  padding-top: 4mm;
+}
+.print-root .avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+@media print {
+  @page {
+    size: A4;
+  }
+  html,
+  body {
+    background: #fafaf9 !important;
+  }
+  .print-root {
+    max-width: none;
+    padding: 0 14mm;
+  }
+  .print-root * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 /* ---------- Scroll reveal ---------- */
 html.js [data-reveal] {
   opacity: 0;

@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/common/BrandIcons";
 import { Chip } from "@/components/common/Chip";
 import { sections } from "@/data/nav";
@@ -56,6 +56,13 @@ export function Hero() {
               >
                 Featured Systems
                 <ArrowDown className="size-4" aria-hidden />
+              </a>
+              <a
+                href="/portfolio.pdf"
+                className="inline-flex items-center gap-2 rounded-md border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors hover:border-line-strong"
+              >
+                <FileDown className="size-4 text-muted" aria-hidden />
+                PDF
               </a>
               <a
                 href={profile.links.github}

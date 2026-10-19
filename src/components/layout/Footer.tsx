@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { FileDown, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/common/BrandIcons";
 import { profile } from "@/data/profile";
 import { sections } from "@/data/nav";
@@ -30,6 +30,15 @@ export function Footer() {
             >
               <Mail className="size-4 text-muted" aria-hidden />
               {profile.links.email}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/portfolio.pdf"
+              className="inline-flex items-center gap-2 rounded-md border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors hover:border-line-strong"
+            >
+              <FileDown className="size-4 text-muted" aria-hidden />
+              Portfolio PDF
             </a>
           </li>
           <li>
